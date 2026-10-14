@@ -1,0 +1,23 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="empty muted">正在读取已复核资料…</view>
+  <block wx:elif="{{deal}}">
+    <view class="notice offline" wx:if="{{mode==='offline'}}">离线资料，可能已有变化。使用前请核对官方渠道。</view>
+    <view class="surface section">
+      <view class="deal-top"><view class="monogram" style="background:{{deal.tone}}">{{deal.mark}}</view><view class="deal-info"><view class="h2">{{deal.brand}}</view><text class="muted small">{{deal.location}}</text></view><button class="save" bindtap="favorite">{{favorite?'已收藏':'＋收藏'}}</button></view>
+      <view class="detail-title">{{deal.title}}</view><view class="benefit">{{deal.benefit}}</view>
+      <text class="tag">{{deal.verificationLabel}} · {{deal.verifiedDate}}</text>
+    </view>
+    <view class="surface section">
+      <text class="eyebrow">先看条件，再去领取</text>
+      <view class="rule"><text class="field-label">适用人群</text><text>{{deal.eligibility || '官方未明确，请先咨询确认'}}</text></view>
+      <view class="rule"><text class="field-label">身份核验</text><text>{{deal.student_verification || '按官方渠道要求核验，本平台不收集证件'}}</text></view>
+      <view class="rule"><text class="field-label">使用时间与限制</text><text>{{deal.usage_window}}</text><text wx:if="{{deal.ends_at}}" class="small muted">结束时间：{{deal.ends_at}}</text></view>
+      <view class="rule"><text class="field-label">领取方法</text><text selectable>{{deal.claim_method}}</text></view>
+      <view class="rule"><text class="field-label">核验说明</text><text>{{deal.evidence_summary || '核对官方公开规则，不代表已替你完成认证或实际核销。'}}</text></view>
+      <view class="rule"><text class="field-label">官方来源</text><text selectable class="source-url">{{deal.official_url}}</text></view>
+    </view>
+    <view class="section"><button class="primary" bindtap="claim">{{claimLabel}}</button><view class="small muted claim-hint">{{claimHint}}</view><button class="secondary" bindtap="feedback">我用过 / 规则有变化</button></view>
+    <view class="footnote">本平台为第三方信息整理工具，优惠以官方最终页面及门店规则为准。</view>
+  </block>
+  <view wx:else class="empty"><view class="h2">这条权益暂不可展示</view><view class="muted">可能已下线、复核超时，或尚未收录。</view><button class="secondary" bindtap="load">重新读取</button><navigator class="text-button" url="/pages/discover/discover" open-type="switchTab">查看其他权益</navigator></view>
+</view>

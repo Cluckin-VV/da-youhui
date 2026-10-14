@@ -1,0 +1,12 @@
+<import src="../../templates/deals.wxml" />
+<view class="page">
+  <text class="eyebrow">THE STUDENT DIRECTORY</text><view class="h1 section">少找入口，<text>{{'\n'}}</text>多用权益。</view>
+  <picker range="{{cities}}" value="{{cityIndex}}" bindchange="onCity"><view class="city-select"><text class="muted">城市</text>{{city}}⌄</view></picker>
+  <view class="search"><view class="search-mark"></view><input placeholder="搜索品牌、优惠或地区" value="{{q}}" bindinput="onSearch" maxlength="80" /></view>
+  <scroll-view scroll-x class="categories" show-scrollbar="{{false}}"><view wx:for="{{categories}}" wx:key="*this" data-category="{{item}}" bindtap="onCategory" class="chip {{category===item?'selected':''}}">{{item}}</view></scroll-view>
+  <view class="filter-row"><picker range="{{districts}}" value="{{districtIndex}}" bindchange="onDistrict"><view class="filter">区域 · {{district}}⌄</view></picker><picker range="{{sorts}}" value="{{sortIndex}}" bindchange="onSort"><view class="filter">{{sort}}⌄</view></picker><view class="filter" bindtap="toggleFavorites">{{onlyFavorites?'✓ 只看收藏':'只看收藏'}}</view></view>
+  <view class="notice {{mode==='offline'?'offline':''}}">{{notice}}</view>
+  <view class="row section"><text class="h2">{{onlyFavorites?'已收藏权益':'已复核权益'}}</text><text class="muted small">{{list.length}} 条</text></view>
+  <template is="dealCards" data="{{list,loading,city}}" />
+  <button wx:if="{{!loading &amp;&amp; !list.length}}" class="text-button" bindtap="refresh">重新同步</button>
+</view>

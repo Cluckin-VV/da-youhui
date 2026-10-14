@@ -1,0 +1,1 @@
+.detail-title { font-size:34rpx; margin-top:30rpx; font-weight:650; }.benefit { font-size:36rpx; line-height:1.5; margin:16rpx 0 26rpx; color:#415233; }.save { background:#f0f3e9; color:#4e643a; font-size:23rpx; padding:18rpx 16rpx; flex-shrink:0; }.source-url { word-break:break-all; font-size:23rpx; color:#546b40; }.claim-hint { margin:16rpx 4rpx 24rpx; }

@@ -1,0 +1,20 @@
+.fab {
+  position: fixed;
+  right: 28rpx;
+  bottom: 40rpx;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  background: #e7512d;
+  color: #fff;
+  padding: 14rpx 26rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+/* tabBar 页：原生 tabBar 在底部，FAB 抬高避免被遮挡 */
+.fab-tab { bottom: 150rpx; }
+.fab-hover { background: #cf4025; transform: scale(0.96); }
+.fab-ico { font-size: 24rpx; line-height: 1; }
+.fab-txt { line-height: 1; }

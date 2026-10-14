@@ -1,0 +1,3 @@
+export type DealStatus='official_long_term'|'official_limited'|'user_verified'|'possibly_expired'|'offline';
+export type Deal={id:string;brand:string;title:string;category:string;city:string;district:string;campus_scope:string;merchant_scope:string;benefit:string;eligibility:string;valid_time:string;start_date:string;end_date:string;claim_method:string;official_url:string;affiliate_url:string;source_type:string;status:DealStatus;last_verified_at:string;verification_note:string;is_demo:boolean;is_visible:boolean;click_count:number;report_count:number;created_at:string;updated_at:string};
+export type Feedback={id:string;deal_id:string;type:'available'|'expired'|'changed';note:string;created_at:string};

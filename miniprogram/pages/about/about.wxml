@@ -1,0 +1,6 @@
+<view class="page">
+  <text class="eyebrow">ABOUT THE HANDBOOK</text><view class="h1 section">大优惠--<text>{{'\n'}}</text>学生权益，认真整理。</view>
+  <view class="surface section"><view class="h2">我们做什么</view><view class="rule">独立整理官方学生权益规则、适用条件与领取方法，不代表任何品牌或学校。是否符合资格、价格与可用名额，以官方最终页面和实际门店规则为准。</view><view class="rule">公开网页核对不等于实测领取成功。未复核、已过期或超过复核期限的权益不公开展示。不会因用户提交“可用”就自动重新发布。</view></view>
+  <view class="surface section"><view class="h2">你的数据</view><view class="rule">浏览不需要登录。不请求身份证、学生证、手机号、GPS 或微信个人资料。城市、收藏及待发送反馈仅保存在本机。</view><view class="rule">点击提交反馈时，会发送权益编号、反馈类型、备注、随机设备编号与随机提交编号。服务端将随机设备编号哈希化，用于限流；提交编号用于防重复。反馈只供后台复核，不对其他用户展示。</view><view class="rule">请勿在备注输入个人身份信息。网络失败时显示“待发送”，只有收到服务端回执才显示送达。维护作业每6小时检查一次，清除超过90天的备注、证据链接与设备标识，保留匿名反馈类型和回执；本机最多保留100条记录。</view><view class="rule">服务提供商可能产生必要的网络访问日志，实际部署前需确认其保留策略并在微信后台配置对应隐私指引。</view></view>
+  <view class="surface section"><view class="h2">联系与更正</view><view class="rule" selectable>{{contact}}</view><view class="rule">如需定位或更正反馈，可提供反馈回执编号，不需要提供学生证或身份证。</view></view>
+</view>

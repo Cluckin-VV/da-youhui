@@ -1,0 +1,1 @@
+.stats { display:flex; gap:18rpx; }.stat { flex:1; }.number { font-size:58rpx; font-weight:650; }.menu { display:flex; align-items:center; justify-content:space-between; min-height:104rpx; border-bottom:1rpx solid #edf0e7; }.menu:last-child { border-bottom:none; }

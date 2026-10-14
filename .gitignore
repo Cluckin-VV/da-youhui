@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+data/
+output/
+tmp/
+database/backups/
+maintenance/out/
+maintenance/sources.production.json
+miniprogram/project.private.config.json
+*.dump
+*.log
+tsconfig.tsbuildinfo
+

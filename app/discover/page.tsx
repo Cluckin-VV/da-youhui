@@ -1,0 +1,2 @@
+import {getDeals} from '@/lib/data';import {DealExplorer} from '@/components/DealExplorer';export const dynamic='force-dynamic';
+export default function Discover(){return <main className="mx-auto max-w-4xl px-4 py-10"><p className="label mb-2 text-leaf">DISCOVER</p><h1 className="mb-2 text-3xl font-black">发现优惠</h1><p className="mb-8 text-muted">按品牌、品类、区域和验证状态找到适合你的优惠。</p><DealExplorer deals={getDeals().filter(d=>d.status!=='offline')} showSort/></main>}

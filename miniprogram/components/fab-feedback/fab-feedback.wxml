@@ -1,0 +1,4 @@
+<view class="fab {{tabbar ? 'fab-tab' : ''}}" bindtap="onTap" hover-class="fab-hover">
+  <text class="fab-ico">✎</text>
+  <text class="fab-txt">反馈</text>
+</view>

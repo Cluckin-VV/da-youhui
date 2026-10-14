@@ -1,0 +1,35 @@
+{
+  "description": "大优惠--：学生权益规则、条件与反馈手册",
+  "appid": "touristappid",
+  "projectname": "da-youhui-miniprogram",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "condition": {},
+  "packOptions": {
+    "ignore": [
+      {"type":"file","value":"pages/webview/webview.js"},
+      {"type":"file","value":"pages/webview/webview.json"},
+      {"type":"file","value":"pages/webview/webview.wxml"},
+      {"type":"file","value":"pages/webview/webview.wxss"},
+      {"type":"file","value":"project.private.config.json"},
+      {"type":"file","value":"data/deals.js"},
+      {"type":"file","value":"data/brand-registry.js"},
+      {"type":"file","value":"assets/images/cater-haidilao.png"},
+      {"type":"file","value":"assets/images/cater-milktea.png"},
+      {"type":"file","value":"assets/images/cater-pizzahut.png"},
+      {"type":"file","value":"assets/images/cater-xiabuxiabu.png"},
+      {"type":"file","value":"assets/images/demo-burger.jpg"},
+      {"type":"file","value":"assets/images/demo-matcha.jpg"},
+      {"type":"file","value":"assets/images/hero-dining.png"},
+      {"type":"file","value":"assets/images/hero-food-city.jpg"}
+    ]
+  }
+}

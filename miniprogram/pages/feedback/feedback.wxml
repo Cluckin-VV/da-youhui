@@ -1,0 +1,11 @@
+<view class="page">
+  <text class="eyebrow">MAKE IT MORE RELIABLE</text><view class="h1 section">用过的你，<text>{{'\n'}}</text>最有发言权。</view><view class="muted section">反馈不会直接公开展示，复核后才会更新规则。</view>
+  <view class="surface section">
+    <text class="field-label">选择权益</text><picker range="{{deals}}" range-key="title" value="{{dealIndex}}" bindchange="onDeal" disabled="{{busy || !deals.length}}"><view class="picker-field">{{deals.length?deals[dealIndex].title:'暂无可反馈权益'}} ⌄</view></picker>
+    <view class="field-label section">使用情况</view><view class="type-grid"><button wx:for="{{types}}" wx:key="key" disabled="{{busy}}" data-key="{{item.key}}" bindtap="onType" class="type {{type===item.key?'active':''}}">{{item.label}}</button></view>
+    <view class="field-label section">补充说明（选填）</view><textarea value="{{note}}" bindinput="onNote" disabled="{{busy}}" maxlength="500" placeholder="例如：使用日期、门店、哪条规则有变化。不要填写姓名、手机号或证件信息。" class="notes" /><text class="small muted">{{note.length}} / 500</text>
+  </view>
+  <view class="section"><button class="primary" bindtap="submit" disabled="{{busy || !dealId}}" loading="{{busy}}">提交反馈</button><view class="small muted section">提交将发送所选权益、反馈内容和随机去重编号。不读取微信身份、位置或通讯录。<navigator url="/pages/about/about" class="text-button">查看数据说明</navigator></view></view>
+  <view wx:if="{{message}}" class="notice section">{{message}}</view>
+  <view wx:if="{{pending.length}}" class="surface section"><view class="h2">待发送 · {{pending.length}}</view><view wx:for="{{pending}}" wx:key="submission_id" class="rule"><text class="small">{{item.deal_id}}</text><text class="muted small">{{item.note || '未填写备注'}}</text><button class="text-button" data-id="{{item.submission_id}}" bindtap="retry" disabled="{{busy}}">重试发送</button></view></view>
+</view>

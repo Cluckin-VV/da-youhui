@@ -1,0 +1,17 @@
+<import src="../../templates/deals.wxml" />
+<view class="page">
+  <view class="row masthead"><text class="wordmark">大优惠<text class="brand-dashes">--</text></text><text class="eyebrow">学生权益手册</text></view>
+  <picker range="{{cities}}" value="{{cityIndex}}" bindchange="onCity"><view class="city-select"><text class="muted">城市</text><text>{{city}}⌄</text><text class="city-description">同时收录全国权益</text></view></picker>
+  <view class="hero">
+    <image class="hero-art" src="/assets/images/student-stilllife-v1.png" mode="aspectFill" />
+    <view class="hero-copy"><text class="eyebrow">LESS SEARCH. MORE LIFE.</text><view class="hero-title">学生身份，<text>{{'\n'}}</text>别浪费。</view><view class="hero-sub">把值得用的权益，认真整理给你。</view></view>
+  </view>
+  <view class="search"><view class="search-mark"></view><input placeholder="搜品牌、权益或城市" value="{{q}}" bindinput="onSearch" maxlength="80" confirm-type="search" /></view>
+  <scroll-view scroll-x class="categories" show-scrollbar="{{false}}"><view wx:for="{{categories}}" wx:key="*this" class="chip {{category===item?'selected':''}}" data-category="{{item}}" bindtap="onCategory">{{item}}</view></scroll-view>
+  <view class="filter-row"><picker range="{{districts}}" value="{{districtIndex}}" bindchange="onDistrict"><view class="filter">区域 · {{district}}⌄</view></picker><navigator url="/pages/cert/cert" class="filter">学生资格怎么核验 ↗</navigator></view>
+  <view class="row section"><text class="h2">值得查一查</text><navigator url="/pages/discover/discover" open-type="switchTab" class="text-button small">全部权益 ↗</navigator></view>
+  <view class="notice {{mode==='offline'?'offline':''}}">{{notice}}</view>
+  <template is="dealCards" data="{{list,loading,city}}" />
+  <button wx:if="{{!loading &amp;&amp; !list.length}}" class="text-button" bindtap="refresh">重新同步</button>
+  <view class="footnote">每条规则可追溯 · 超时未复核自动隐藏<text>{{'\n'}}</text>不代表品牌或学校，不承诺每位学生都能领取</view>
+</view>

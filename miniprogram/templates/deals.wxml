@@ -1,0 +1,11 @@
+<template name="dealCards">
+  <view wx:if="{{loading}}" class="empty muted">正在读取已复核资料…</view>
+  <block wx:elif="{{list.length}}">
+    <navigator wx:for="{{list}}" wx:key="id" class="deal-card" url="/pages/detail/detail?id={{item.id}}">
+      <view class="deal-top"><view class="monogram" style="background:{{item.tone}}">{{item.mark}}</view><view class="deal-info"><view class="deal-brand">{{item.brand}}</view><view class="deal-title">{{item.title}}</view></view><text class="muted">↗</text></view>
+      <view class="deal-benefit">{{item.benefit}}</view>
+      <view class="deal-meta"><text>{{item.location}}</text><text>规则复核 · {{item.verifiedDate}}</text></view>
+    </navigator>
+  </block>
+  <view wx:else class="empty"><view class="h2">暂时没有符合条件的权益</view><view class="muted">试试其他分类，或等待新一轮复核。<text>{{'\n'}}</text>没有证据的优惠不会凑数展示。</view></view>
+</template>

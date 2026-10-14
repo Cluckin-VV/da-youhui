@@ -1,0 +1,2 @@
+import {statusLabels} from '@/lib/labels';import {DealStatus} from '@/lib/types';
+export function StatusBadge({status}:{status:DealStatus}){const tone=status==='possibly_expired'||status==='offline'?'bg-stone-200 text-stone-700':status==='user_verified'?'bg-amber-100 text-amber-900':'bg-emerald-100 text-emerald-900';return <span className={`label rounded px-2 py-1 ${tone}`}>{statusLabels[status]}</span>}

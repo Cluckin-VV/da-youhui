@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {addFeedback,getDeal} from '@/lib/data';
+export async function POST(req:Request){try{const b=await req.json();if(!getDeal(b.deal_id)||!['available','expired','changed'].includes(b.type)||String(b.note||'').length>500)return NextResponse.json({error:'invalid'}, {status:400});addFeedback({id:crypto.randomUUID(),deal_id:b.deal_id,type:b.type,note:String(b.note||''),created_at:new Date().toISOString()});return NextResponse.json({ok:true})}catch{return NextResponse.json({error:'invalid'}, {status:400})}}

@@ -1,0 +1,7 @@
+<view class="page">
+  <text class="eyebrow">BEFORE YOU CLAIM</text><view class="h1 section">学生认证，<text>{{'\n'}}</text>没有通用钥匙。</view>
+  <view class="surface section"><view class="h2">01 · 看清你的资格</view><view class="rule">本科生、研究生、新生、成人教育等身份的适用范围可能不同。先查看每条权益的具体条件。</view></view>
+  <view class="surface section"><view class="h2">02 · 在官方渠道认证</view><view class="rule">按品牌的官方网站或官方应用要求完成认证。某一平台认证通过，不代表另一平台自动认可。</view></view>
+  <view class="surface section"><view class="h2">03 · 核对当次规则</view><view class="rule">先确认门店、时段、名额、叠加规则与最终价格，再下单。本平台不代收学生证、身份证或账号密码。</view></view>
+  <navigator url="/pages/discover/discover" open-type="switchTab" class="primary section">查看已复核权益</navigator>
+</view>

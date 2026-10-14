@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "id": "src-12306",
+      "name": "铁路 12306 学生票政策",
+      "type": "official_web",
+      "method": "https_get",
+      "url": "https://www.12306.cn/index/index/news",
+      "trust": "official",
+      "match_brand": "铁路 12306",
+      "cadence": "monthly",
+      "demo": true,
+      "mock_facts": {
+        "status": "official_long_term",
+        "discount_text": "硬座半价 · 高铁二等座 7.5 折",
+        "last_verified_at": "2026-08-12"
+      }
+    },
+    {
+      "id": "src-apple-edu",
+      "name": "Apple 教育商店",
+      "type": "official_web",
+      "method": "https_get",
+      "url": "https://www.apple.com.cn/shop/education",
+      "trust": "official",
+      "match_brand": "Apple 教育优惠",
+      "cadence": "monthly",
+      "demo": true,
+      "mock_facts": {
+        "status": "official_limited",
+        "discount_text": "可叠国补，最高省 1400 元",
+        "last_verified_at": "2026-08-12"
+      }
+    },
+    {
+      "id": "src-guizhou",
+      "name": "贵州文旅学生免票公告",
+      "type": "official_news",
+      "method": "rss_or_news",
+      "url": "https://whhly.guizhou.gov.cn",
+      "trust": "official",
+      "match_brand": "贵州国有 A 级景区",
+      "cadence": "monthly",
+      "demo": true,
+      "mock_facts": {
+        "status": "official_long_term",
+        "discount_text": "全年免大门票",
+        "last_verified_at": "2026-08-12"
+      }
+    }
+  ]
+}

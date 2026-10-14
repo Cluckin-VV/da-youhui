@@ -1,0 +1,48 @@
+/* Original design: quiet editorial layout, ink / paper / sage. */
+page { background:#f7f7f4; color:#20231f; font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif; font-size:28rpx; line-height:1.6; }
+view, text, button, input, textarea, navigator { box-sizing:border-box; }
+button { margin:0; font-size:28rpx; line-height:1.5; border-radius:16rpx; }
+button::after { border:none; }
+button[disabled] { opacity:.45; }
+button:active, navigator:active { opacity:.75; }
+.page { padding:24rpx 32rpx 48rpx; padding-bottom:calc(48rpx + env(safe-area-inset-bottom)); }
+.row { display:flex; align-items:center; justify-content:space-between; gap:16rpx; }
+.muted { color:#72766e; }
+.small { font-size:23rpx; }
+.eyebrow { color:#747a6d; font-size:20rpx; letter-spacing:3rpx; font-weight:600; }
+.h1 { font-size:48rpx; line-height:1.25; font-weight:700; letter-spacing:-1rpx; }
+.h2 { font-size:34rpx; font-weight:650; }
+.section { margin-top:36rpx; }
+.surface { background:#fff; border:1rpx solid #e7e9e2; border-radius:20rpx; padding:28rpx; }
+.primary { background:#20231f; color:#fff; padding:23rpx 28rpx; font-weight:600; }
+.secondary { background:#fff; color:#20231f; border:1rpx solid #d7dcd0; padding:22rpx 24rpx; }
+.text-button { background:transparent; padding:12rpx 0; color:#475b35; min-height:80rpx; display:flex; align-items:center; }
+.notice { background:#edf0e7; color:#526046; padding:16rpx 22rpx; border-radius:12rpx; font-size:23rpx; }
+.notice.offline { background:#f4eedf; color:#776137; }
+.empty { padding:60rpx 24rpx; text-align:center; border:1rpx dashed #d6dbd0; border-radius:20rpx; margin-top:24rpx; }
+.empty .muted { margin:16rpx 0 26rpx; }
+.city-select { display:flex; align-items:center; min-height:80rpx; font-size:27rpx; }
+.city-select .muted { margin-right:16rpx; }
+.search { display:flex; align-items:center; background:#fff; border:1rpx solid #dde1d6; border-radius:16rpx; margin:24rpx 0; padding:0 24rpx; }
+.search input { flex:1; min-width:0; height:88rpx; font-size:28rpx; }
+.search-mark { width:25rpx; height:25rpx; border:3rpx solid #7c8176; border-radius:50%; margin-right:24rpx; position:relative; }
+.search-mark::after { content:""; position:absolute; width:13rpx; height:3rpx; background:#7c8176; right:-10rpx; bottom:-5rpx; transform:rotate(45deg); }
+.categories { white-space:nowrap; margin:0 0 12rpx; width:100%; }
+.chip { display:inline-block; padding:18rpx 26rpx; margin-right:12rpx; border-radius:14rpx; color:#62695b; background:#ecefe7; font-size:26rpx; min-height:80rpx; }
+.chip.selected { background:#20231f; color:#fff; }
+.filter-row { display:flex; flex-wrap:wrap; align-items:center; gap:14rpx; margin:8rpx 0 24rpx; }
+.filter { padding:12rpx 16rpx; min-height:76rpx; display:flex; align-items:center; font-size:24rpx; color:#58614e; background:#fff; border:1rpx solid #e5e8de; border-radius:12rpx; }
+.deal-card { background:#fff; padding:28rpx; margin-top:18rpx; border-radius:20rpx; border:1rpx solid #e5e8de; }
+.deal-top { display:flex; align-items:center; gap:18rpx; }
+.monogram { width:76rpx; height:76rpx; border-radius:18rpx; display:flex; align-items:center; justify-content:center; font-size:32rpx; font-weight:700; flex-shrink:0; }
+.deal-info { min-width:0; flex:1; }
+.deal-brand { font-size:29rpx; font-weight:650; }
+.deal-title { font-size:23rpx; color:#73796c; line-height:1.5; }
+.deal-benefit { font-size:30rpx; font-weight:650; line-height:1.5; margin:24rpx 0 18rpx; }
+.deal-meta { border-top:1rpx solid #eef0e9; padding-top:18rpx; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8rpx; font-size:21rpx; color:#75806b; }
+.tag { display:inline-block; background:#eef1e8; color:#566749; padding:4rpx 12rpx; font-size:21rpx; border-radius:8rpx; }
+.footnote { margin-top:34rpx; font-size:21rpx; line-height:1.8; color:#81877b; text-align:center; }
+.field-label { display:block; margin-bottom:14rpx; font-size:25rpx; color:#727b66; }
+.rule { margin-top:22rpx; padding-top:22rpx; border-top:1rpx solid #ecefe7; }
+.rule text { display:block; }
+.rule .field-label { margin-bottom:8rpx; }

@@ -1,0 +1,6 @@
+<view class="page">
+  <text class="eyebrow">YOUR LITTLE HANDBOOK</text><view class="h1 section">不用登录，<text>{{'\n'}}</text>也能认真省。</view><view class="muted section">{{city}} · 城市与收藏仅保存在本机</view>
+  <view class="stats section"><view class="surface stat" bindtap="favorites"><view class="number">{{favorites}}</view><text class="small muted">我的收藏 ↗</text></view><view class="surface stat" bindtap="feedback"><view class="number">{{pending}}</view><text class="small muted">反馈待发送 ↗</text></view></view>
+  <view class="surface section"><navigator url="/pages/cert/cert" class="menu">学生资格说明 <text>↗</text></navigator><navigator url="/pages/about/about" class="menu">关于 / 数据与隐私 <text>↗</text></navigator><view class="menu" bindtap="feedback">已送达反馈 <text>{{sent}} 条</text></view></view>
+  <view class="footnote">收藏不会替你领取权益，也不会延长优惠有效期。<text>{{'\n'}}</text>换设备或清理小程序数据后，本机记录可能丢失。</view>
+</view>

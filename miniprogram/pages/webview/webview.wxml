@@ -1,0 +1,1 @@
+<web-view wx:if="{{src}}" src="{{src}}"></web-view><view wx:else class="page"><view class="empty"><view class="h2">此入口尚未接通</view><view class="muted">未配置已审核的业务域名，或权益已停止展示。请返回详情查看官方领取方法。</view></view></view>
